@@ -1,0 +1,488 @@
+*, body{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+    direction: ltr;
+}
+.flex-center{
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+.flex-col{
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.flex-row{
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.loaders-container{
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+.loader-container-1,.loader-container-2,.loader-container-3,.loader-container-4
+,.loader-container-5,.loader-container-6,.loader-container-7{
+    margin: 10px;
+}
+
+.loader-container-1,.loader-container-2,.loader-container-3,.loader-container-4{
+ display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+/*spinner loader (.loader-container-1)*/
+.spinner-loader{
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+}
+.spinner-loader .spinner-loader-top{
+    height: 100%;
+    width: 100%;
+    border: 1px solid transparent;
+    border-top: 1px solid #C06C84;
+    border-radius: 50%;
+    animation: spinner1 1.5s infinite linear ;
+}
+.spinner-loader .spinner-loader-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #d45d80;
+    border-radius: 50%;
+    animation: spinner2 1.5s infinite  linear;
+}
+@-moz-keyframes spinner1 {
+    0%{
+        border-width: 1px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 4px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 0px;
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spinner1 {
+    0%{
+        border-width: 1px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 4px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 0px;
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinner1 {
+    0%{
+        border-width: 1px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 4px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 0px;
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner2 {
+    0%{
+        border-width: 4px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 0px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 4px;
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinner2 {
+    0%{
+        border-width: 4px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 0px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 4px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes  spinner2 {
+    0%{
+        border-width: 4px;
+        transform: rotate(0deg);
+    }
+    50%{
+        border-width: 0px;
+        transform: rotate(180deg);
+    }
+    100%{
+        border-width: 4px;
+        transform: rotate(360deg);
+    }
+}
+/*balls bounce*/
+.balls-loaders-container{
+    height: 56px;
+    width: 100%;
+}
+.balls-loader-1,.balls-loader-2, .balls-loader-3,.balls-loader-4{
+    margin-right: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #355C7D;
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-align-self: flex-start;
+    align-self: flex-end;
+    -moz-animation: bounce 2s linear infinite  alternate;
+    animation:bounce 1s cubic-bezier(0.19,0.57,0.3,0.98) infinite  alternate;
+}
+
+.balls-loader-1{
+    opacity: 1;
+    animation-delay: 125ms;
+}
+.balls-loader-2 {
+    opacity: 0.8;
+    animation-delay: 250ms;
+}
+.balls-loader-3{
+    opacity: 0.6;
+    animation-delay: 375ms;
+
+}
+.balls-loader-4{
+    opacity: 0.4;
+    animation-delay: 500ms;
+    /*
+    -moz-animation: bounce-4 2s infinite ease-in-out;
+    animation:bounce-4 2s infinite ease-in-out;*/
+}
+@-webkit-keyframes bounce {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-40px);
+    }
+}
+@-moz-keyframes bounce {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-40px);
+    }
+}
+@keyframes bounce {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-40px);
+    }
+}
+/*multi spinner */
+.multi-spinner-container{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.multi-spinner-1{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #C06C84;
+    border-radius: 50%;
+    animation: multi-spinner 1.5s infinite cubic-bezier(0.19,0.57,0.3,0.98) ;
+    animation-delay: 0s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.multi-spinner-2{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #005cfc;
+    border-radius: 50%;
+    animation: multi-spinner 1.5s infinite cubic-bezier(0.19,0.57,0.3,0.98) ;
+    animation-delay: 0.3s;
+    width: 92px;
+    height:  92px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transform: translate(-50%, -50%);
+}
+.multi-spinner-3{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #fc6d00;
+    border-radius: 50%;
+    animation: multi-spinner 1.5s infinite cubic-bezier(0.19,0.57,0.3,0.98) ;
+    animation-delay: 0.6s;
+    width: 84px;
+    height:  84px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    transform: translate(-50%, -50%);
+}
+@-moz-keyframes multi-spinner {
+    0%{
+        transform: rotate(0deg);
+        border-width: 1px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 6px;
+    }
+
+    100%{
+        transform: rotate(360deg) ;
+        border-width: 1px;
+    }
+}
+@-webkit-keyframes multi-spinner {
+    0%{
+        transform: rotate(0deg);
+        border-width: 1px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 6px;
+    }
+
+    100%{
+        transform: rotate(360deg) ;
+        border-width: 1px;
+    }
+}
+@-o-keyframes multi-spinner {
+    0%{
+        transform: rotate(0deg);
+        border-width: 1px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 6px;
+    }
+
+    100%{
+        transform: rotate(360deg) ;
+        border-width: 1px;
+    }
+}
+@keyframes multi-spinner {
+    0%{
+       transform: rotate(0deg);
+        border-width: 1px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 6px;
+    }
+
+    100%{
+        transform: rotate(360deg) ;
+        border-width: 1px;
+    }
+}
+/*coin loader*/
+.coin-loaders{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.coin-loader-1, .coin-loader-2, .coin-loader-3, .coin-loader-4{
+    text-align: -moz-center;
+    text-align: -webkit-center;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    font-size: 2rem;
+    font-family: "Berlin Sans FB";
+    font-weight: 300px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    border: solid 1px transparent;
+    border-radius: 50%;
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.coin-loader-1{
+    left: 0;
+   animation: coin-1 2s infinite linear;
+    animation-delay: 0s;
+}
+.coin-loader-2{
+    left: 50px;
+    animation: coin-2 2s infinite linear;
+    animation-delay: 0.33s;
+
+}
+.coin-loader-3{
+    left: 100px;
+    animation: coin-1 2s infinite linear;
+    animation-delay: 0.66s;
+}
+.coin-loader-4{
+    left: 150px;
+   animation: coin-2 2s infinite linear;
+    animation-delay: 0.99s;
+}
+@keyframes coin-1 {
+    0%{
+        transform: skew(0deg,0deg);
+    }
+    50%{
+        transform: skew(30deg,30deg);
+    }
+    100%{
+        transform: skew(0deg,0deg);
+
+    }
+}
+@keyframes coin-2 {
+    0%{
+        transform: skew(0deg,0deg);
+    }
+    50%{
+        transform: skew(-30deg,-30deg);
+    }
+    100%{
+        transform: skew(0deg,0deg);
+
+    }
+}
+/*stair loaders*/
+.stair-loaders-container{
+    width: 76px;
+    height: 200px;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+    align-items: flex-end;
+    -webkit-align-content: flex-end;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+
+}
+.stair-loaders-container div{
+    width: 15px;
+    margin-right: 4px;
+}
+.stair-loaders-container div:nth-child(1){
+    animation: stair-1 1s infinite cubic-bezier(0.19,0.57,0.3,0.98) alternate;
+    height: 40px;
+    animation-delay: 0s;
+    background-color: #01F4FF;
+}
+.stair-loaders-container div:nth-child(2){
+    animation: stair-2 1s infinite cubic-bezier(0.19,0.57,0.3,0.98) alternate;
+    height: 30px;
+    animation-delay: 0.1s;
+    background-color: #2AEBD8;
+}
+.stair-loaders-container div:nth-child(3){
+    animation: stair-3 1s infinite cubic-bezier(0.19,0.57,0.3,0.98) alternate;
+    height: 20px;
+    animation-delay: 0.2s;
+    background-color: #73ead5;
+}
+.stair-loaders-container div:nth-child(4){
+    animation: stair-4 1s infinite cubic-bezier(0.19,0.57,0.3,0.98) alternate;
+    height: 10px;
+    animation-delay: 0.3s;
+    background-color: #a9ffca;
+}
+@keyframes  stair-1{
+    from{
+        height: 40px;
+    }
+    to{
+        height: 70px;
+    }
+}
+@keyframes  stair-2{
+    from{
+        height: 30px;
+    }
+    to{
+        height: 60px;
+    }
+}
+@keyframes  stair-3{
+    from{
+        height: 20px;
+    }
+    to{
+        height: 50px;
+    }
+}
+@keyframes  stair-4{
+    from{
+        height: 10px;
+    }
+    to{
+        height: 40px;
+    }
+}

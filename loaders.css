@@ -239,6 +239,15 @@ body{
     height: 100px;
     position: relative;
 }
+.multi-spinner-container img{
+   width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #C06C84;
+}
 .multi-spinner-1{
     border: 1px solid transparent;
     border-bottom: 1px solid #C06C84;

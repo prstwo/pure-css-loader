@@ -501,7 +501,7 @@ body{
     height: 50px;
     background-color: white;
     position: relative;
-
+    animation: ;
 }
 .spinner-circle{
     width: 100%;
@@ -517,41 +517,41 @@ body{
     position: absolute;
     content: '';
     width: 16px;
-    height: 2px;
-    background-color: black;
+    height: 4px;
     top: 50%;
     left: 100%;
     transform: rotate(0deg);
     transform-origin: bottom;
+    animation: spinner-opacity 12s infinite linear;
+    animation-delay: 0s;
 }
-
-
 .spinner-circle:nth-child(2):before{
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
     bottom:100%;
     right: 50%;
+    animation: spinner-opacity 12s infinite linear;
+    animation-delay: 2s;
 }
 .spinner-circle:nth-child(3):before{
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
     top: 100%;
     right: 50%;
     transform: rotate(0deg);
+    animation: spinner-opacity 12s infinite linear;
+    animation-delay: 2s;
 }
 
 .spinner-circle:nth-child(4):before{
     position: absolute;
     content: '';
     width: 16px;
-    height: 2px;
-    background-color: black;
+    height: 4px;
     top: 50%;
     right: 100%;
     transform: rotate(0deg);
@@ -559,88 +559,93 @@ body{
 .spinner-circle:nth-child(5):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    top: 22%;
-    left: 3px;
-    transform: rotate(119deg);
+    top: 25%;
+    left: 0px;
+    transform: rotate(112deg);
     transform-origin: top;
 }
 .spinner-circle:nth-child(6):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    top: 17%;
-    right: 3px;
-    transform: rotate(235deg);
+    top: 25%;
+    right: 0px;
+    transform: rotate(241deg);
     transform-origin: top;
 }
 .spinner-circle:nth-child(7):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    bottom: 17%;
-    right: 3px;
-    transform: rotate(127deg);
+    bottom: 23%;
+    right: 1px;
+    transform: rotate(126deg);
     transform-origin: bottom;
 }
 .spinner-circle:nth-child(8):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    bottom: 17%;
-    left: 3px;
+    bottom: 23%;
+    left: 0px;
     transform: rotate(235deg);
     transform-origin: bottom;
 }
 .spinner-circle:nth-child(9):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    bottom: 0%;
-    left: 11px;
+    bottom: 2%;
+    left: 8px;
     transform: rotate(215deg);
     transform-origin: bottom;
 }
 .spinner-circle:nth-child(10):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    bottom: 0%;
-    right: 11px;
+    bottom: 2%;
+    right: 10px;
     transform: rotate(143deg);
     transform-origin: bottom;
 }
 .spinner-circle:nth-child(11):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    top: 0;
+    top: 2%;
     right: 11px;
-    transform:rotate(208deg);
+    transform: rotate(212deg);
     transform-origin: top;
 }
 .spinner-circle:nth-child(12):before {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 4px;
     height: 16px;
-    background-color: black;
-    top: 2%;
-    left: 11px;
-    transform: rotate(144deg);
+    top: 6%;
+    left: 7px;
+    transform: rotate(
+            141deg
+    );
     transform-origin: top;
+}
+.spinner-circle:before{
+    background-color: #003766;
+}
+@keyframes spinner-opacity  {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
 }
